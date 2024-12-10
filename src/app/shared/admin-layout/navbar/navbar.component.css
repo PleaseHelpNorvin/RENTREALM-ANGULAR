@@ -34,8 +34,10 @@ mat-toolbar {
     border-radius: 4px;
   }
   
-  .account-btn:hover {
-    color: #1565c0;
+  .account-btn:hover mat-icon{
+    /* text-decoration: #007bff; */
+    color: #007bff;
+    /* background-color: #007bff; */
   }
   
   /* Dropdown menu styles */
