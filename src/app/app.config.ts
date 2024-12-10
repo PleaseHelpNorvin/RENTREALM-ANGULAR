@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
     provideHttpClient(), 
-    provideAnimationsAsync(),
+    provideAnimationsAsync(), provideAnimationsAsync(),
     // provideCharts(withDefaultRegisterables()), // Add ng2-charts configuration here
 
   ]

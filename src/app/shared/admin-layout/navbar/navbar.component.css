@@ -1,26 +1,31 @@
 /* Styling for mat-toolbar */
 mat-toolbar {
-    background-color: #1976d2; /* Background color */
-    color: white; /* Text color */
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 10px;
-    height: 64px;
-  }
+  background-color: rgb(237, 247, 252); /* Background color */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  height: 64px;
+  
+  /* Add shadow to the right side */
+}
   .nav-container {
     display: flex;
     justify-content: space-between; /* Distributes space between items */
     align-items: center; /* Vertically centers the items */
     width: 100%;
-}
-  .example-spacer-20px{
+    }
+    .nav-container span {
+        color: gray;
+    }
+    .example-spacer-20px{
     width: 10px;
   }
   
   /* Styling for the account button */
   .account-btn {
-    background-color: #1976d2;
+    background-color: rgb(237, 247, 252);
     border: none;
     color: white;
     padding: 10px;
@@ -30,7 +35,7 @@ mat-toolbar {
   }
   
   .account-btn:hover {
-    background-color: #1565c0;
+    color: #1565c0;
   }
   
   /* Dropdown menu styles */
