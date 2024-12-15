@@ -1,0 +1,24 @@
+<div class="custom-card">
+   <div class="row">
+     <!-- Custom Header Content -->
+     <div class="card-header" [ngStyle]="{'background-color': cardHeaderBgColor}">
+        <ng-content select="[card-header]"></ng-content>
+      </div>
+    
+      <!-- Body Content -->
+      <div class="card-body">
+        <ng-content select="[card-body]">
+            <!-- <ng-content select="[card-sub-body]"> -->
+                <p class="card-body-p">{{ cardBodyText }}</p>
+                <h3 class="card-body-h3">{{ cardBodyValue }}</h3>
+            <!-- </ng-content> -->
+        </ng-content>
+      </div>
+   </div>
+   <div class="divider"></div>
+    <!-- Footer Content -->
+    <div class="card-footer">
+      <ng-content select="[card-footer]"></ng-content>
+    </div>
+  </div>
+  

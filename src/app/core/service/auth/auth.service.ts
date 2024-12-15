@@ -25,8 +25,19 @@ export class AuthService {
   }
 
   // Log out the user by removing the token
-  logout(): void {
-    sessionStorage.removeItem(this.tokenKey); // Remove the token from sessionStorage
+  logout(): Observable<any> {
+    const token = this.getToken(); // Get the actual token from sessionStorage
+    if (!token) {
+      console.error('No token found in sessionStorage');
+      throw new Error('User is not logged in');
+    }
+    const headers = {
+      Authorization: `Bearer ${token}` // Use the retrieved token
+    };
+    sessionStorage.clear();
+    
+
+    return this.http.get<any>(`${this.apiUrl}/logout`, { headers }); // Send GET request with headers
   }
 
   // Save the token

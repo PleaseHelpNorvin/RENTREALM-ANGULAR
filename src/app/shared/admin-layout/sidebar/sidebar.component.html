@@ -1,15 +1,27 @@
 <div class="sidebar">
-    <div class="sidebar-head">
-        <img src="assets/rentrealm_logo_for_sure.png" alt="rentrealm_logo">
-        <h3>RentRealm</h3>
-    </div>
-    <div class="divider"></div>
-    <ul class="dynamic-nav">
-      <!-- <li><a [routerLink]="'/admin/dashboard'"><span class="material-icons">dashboard</span> Dashboard</a></li>
-      <li><a [routerLink]="'/admin/tenants'"><span class="material-icons">group</span> Tenants</a></li>
-      <li><a [routerLink]="'/admin/chat'"><span class="material-icons">chat</span> Messages</a></li>
-      <li><a [routerLink]="'/admin/payment'"><span class="material-icons">payment</span>Payment</a></li>
-      <li><a [routerLink]="'/admin/maintenance'"><span class="material-icons">build</span>Maintentance</a></li>
-      <li><a [routerLink]="'/admin/settings'"><span class="material-icons">settings</span>Settings</a></li> -->
-    </ul>
+  <div class="sidebar-head">
+      <img src="assets/rentrealm_logo_for_sure.png" alt="rentrealm_logo">
+      <h3>RentRealm</h3>
+  </div>
+  <div class="divider"></div>
+  <ul class="dynamic-nav">
+      <li>
+          <a 
+            [routerLink]="'/admin/dashboard'" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+              <span class="material-icons">dashboard</span> Dashboard
+          </a>
+      </li>
+      <li>
+          <a 
+            [routerLink]="'/admin/properties'" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+              <span class="material-icons">home</span> Properties
+          </a>
+      </li>
+  </ul>
 </div>

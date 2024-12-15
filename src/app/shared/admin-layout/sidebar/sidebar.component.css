@@ -42,6 +42,11 @@
   .dynamic-nav li {
     margin-bottom: 20px;
   }
+
+  .dynamic-nav li a.active {
+    color: white;
+    background-color: #007bff;
+  }
   
   .dynamic-nav a {
     display: block;

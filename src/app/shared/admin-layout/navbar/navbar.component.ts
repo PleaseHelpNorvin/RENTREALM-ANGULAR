@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIcon  } from '@angular/material/icon';
+import { AuthService } from '../../../core/service/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +13,8 @@ import { MatIcon  } from '@angular/material/icon';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  constructor(private authService: AuthService, private router: Router) {}
+
   menuOpen = false; // To track if the dropdown menu is open
 
   toggleMenu() {
@@ -19,8 +23,17 @@ export class NavbarComponent {
 
   logout() {
     console.log('Logging out...');
-    // Add your logout logic here
+    this.authService.logout().subscribe(
+      (response) => {
+        console.log('Logout successful:', response);
+        this.router.navigate(['/']); // Redirect to the login page
+      },
+      (error) => {
+        console.error('Logout failed:', error);
+      }
+    );
   }
+
 
   profile() {
     console.log('Opening profile...');

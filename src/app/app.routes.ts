@@ -11,6 +11,7 @@ import { HomePageComponent } from './views/home-page/home-page.component';
 // import { TenantsEditComponent } from './views/tenants-page/tenants-edit/tenants-edit.component';
 import { AuthGuard } from './core/guard/auth.guard';
 import { NoAuthGuard } from './core/guard/noauth.guard';
+import { PropertyPageComponent } from './views/property-page/property-page.component';
 
 
 export const routes: Routes = [
@@ -27,7 +28,12 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         component: HomePageComponent,
-        data: { breadcrumb: 'Dashboard' }
+        // data: { breadcrumb: 'Dashboard' }
+      },
+      {
+        path: 'properties',
+        component: PropertyPageComponent,
+        // data: { breadcrumb: 'Dashboard' }
       },
     //   {
     //     path: 'tenants',

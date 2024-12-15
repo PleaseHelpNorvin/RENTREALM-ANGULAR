@@ -1,7 +1,7 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
-// import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 // import { AppComponent } from './app.component';
 
@@ -15,6 +15,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(), 
     provideAnimationsAsync(), provideAnimationsAsync(),
     // provideCharts(withDefaultRegisterables()), // Add ng2-charts configuration here
+    provideCharts(withDefaultRegisterables()), // Add ng2-charts configuration here
 
   ]
 };
