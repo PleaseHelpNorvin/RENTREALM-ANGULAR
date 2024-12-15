@@ -4,18 +4,19 @@
     box-sizing: border-box; /* Includes padding and border in width */
     overflow: hidden; /* Prevent child content from spilling out */
 }
+.title-container{
+    border: 1px solid black;
+}
 .row {
     padding: 16px;
     /* border: 1px solid black; */
     display: flex;
-    gap: 16px;
+    gap: 20px;
+    justify-content: center;
     width: 100%;
     max-width: 100%; /* Prevent the row from exceeding parent width */
     box-sizing: border-box; /* Ensures padding is part of the row's width */
     flex-wrap: wrap; /* Wrap content when space is insufficient */
-}
-.app-custom-card{
-    width: 100%;
 }
 
 .card-body-p, .card-body-h3 {
@@ -54,8 +55,24 @@
     box-sizing: border-box; /*Ensures padding and border are part of the box's dimensions*/
 }
 
+
+
 /* canvas { */
     /* width: 100% !important; */
     /* height: auto !important; Allow height to adjust dynamically */
     /* max-height: 100%; Prevents canvas from overflowing its parent */
 /* } */
+@media (max-width: 522px) {
+    app-custom-card{
+        width: 100%;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box{
+        width: 100%;
+    }
+}

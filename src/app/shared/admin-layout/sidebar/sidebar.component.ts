@@ -13,4 +13,16 @@ import { RouterModule } from '@angular/router';
 })
 export class SidebarComponent {
 
+  showInsideSidebar = false; // Sidebar initially hidden
+
+  toggleInsideSidebar() {
+    this.showInsideSidebar = !this.showInsideSidebar; // Toggle visibility
+    if(this.showInsideSidebar){
+      console.log('true');
+    }else{
+      console.log('false')
+    }
+
+  }
+
 }

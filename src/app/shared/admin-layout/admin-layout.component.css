@@ -29,6 +29,10 @@
 .burger-icon {
     display: none;
 }
+.sidebar-burger-icon{
+    border: 1px solid black;
+    z-index: 9999;
+}
 
 .burger-line {
     width: 100%;
